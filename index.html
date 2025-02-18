@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* Global Reset */
         * {
             margin: 0;
             padding: 0;
@@ -18,6 +19,7 @@
             background-color: #f7f7f7;
             color: #3e3e3e;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         /* Header */
@@ -92,6 +94,14 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             margin-top: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .content h2 {
@@ -144,6 +154,21 @@
             font-weight: bold;
         }
 
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .dark-mode .header {
+            background: #34495e;
+        }
+
+        .dark-mode .hero h1,
+        .dark-mode .hero p {
+            color: white;
+        }
+
         /* Scroll-to-top Button */
         .scroll-top-btn {
             position: fixed;
@@ -164,9 +189,58 @@
             background: #1abc9c;
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            font-size: 30px;
+            color: #2c3e50;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #16a085;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin-top: 40px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background: #f7f7f7;
+        }
+
+        .contact-form button {
+            background: #2c3e50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #16a085;
         }
 
     </style>
@@ -205,6 +279,21 @@
             <p><strong>Email:</strong> <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a></p>
             <p><strong>Phone:</strong> <a href="tel:+16412339266">+1 (641) 233-9266</a></p>
         </div>
+
+        <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form action="mailto:sandrakawombe@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/sandra-kawombe" target="_blank">LinkedIn</a>
+            <a href="https://github.com/sandrakawombe" target="_blank">GitHub</a>
+        </div>
     </div>
 
     <div class="contact">
@@ -228,6 +317,35 @@
         // Smooth scroll back to top
         document.getElementById('scrollTopBtn').addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.createElement('button');
+        darkModeToggle.innerHTML = '🌙';
+        darkModeToggle.style.position = 'fixed';
+        darkModeToggle.style.top = '20px';
+        darkModeToggle.style.right = '20px';
+        darkModeToggle.style.background = '#16a085';
+        darkModeToggle.style.color = 'white';
+        darkModeToggle.style.border = 'none';
+        darkModeToggle.style.borderRadius = '50%';
+        darkModeToggle.style.padding = '10px 15px';
+        darkModeToggle.style.fontSize = '20px';
+        darkModeToggle.style.cursor = 'pointer';
+        document.body.appendChild(darkModeToggle);
+
+        darkModeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Scroll Animations
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.content');
+            elements.forEach(function(element) {
+                if (element.getBoundingClientRect().top < window.innerHeight - 150) {
+                    element.classList.add('visible');
+                }
+            });
         });
     </script>
 </body>
