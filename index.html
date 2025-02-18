@@ -11,15 +11,15 @@
     <style>
         /* Reset and Base Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background-color: #F5F5F5; color: #3E2723; line-height: 1.6; }
+        body { font-family: 'Roboto', sans-serif; background-color: #F7E6F2; color: #3E2723; line-height: 1.6; }
         h1, h2 { font-family: 'Playfair Display', serif; font-weight: 700; }
 
         /* Smooth Scroll */
         html { scroll-behavior: smooth; }
 
         /* Header */
-        .header { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 80px 0; }
-        .header h1 { font-size: 48px; margin-bottom: 20px; }
+        .header { background-color: #F2C9D1; color: #3E2723; text-align: center; padding: 100px 0; border-bottom: 4px solid #D7CCC8; }
+        .header h1 { font-size: 48px; margin-bottom: 20px; font-weight: bold; }
         .header p { font-size: 24px; font-weight: 300; }
 
         /* Navigation Bar */
@@ -27,20 +27,22 @@
             position: sticky;
             top: 0;
             background-color: #3E2723;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             justify-content: center;
             z-index: 1000;
         }
         nav a {
-            color: #fff;
+            color: #F2C9D1;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
         }
         nav a:hover {
             color: #D7CCC8;
+            transform: scale(1.1);
         }
 
         /* Container */
@@ -72,6 +74,7 @@
         }
         .skills span:hover {
             transform: scale(1.1);
+            background-color: #FFB6B9;
         }
 
         /* Pie Chart */
@@ -98,8 +101,8 @@
             height: 100%;
             border-radius: 20px;
         }
-        .java { width: 90%; background-color: #3E2723; }
-        .spring { width: 80%; background-color: #7C4D40; }
+        .java { width: 90%; background-color: #FFB6B9; }
+        .spring { width: 80%; background-color: #FFC1A1; }
         .aws { width: 75%; background-color: #FF9800; }
 
         /* Certifications */
@@ -125,7 +128,7 @@
         }
 
         /* Footer */
-        .footer { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 30px 20px; margin-top: 60px; }
+        .footer { background-color: #F2C9D1; color: #3E2723; text-align: center; padding: 30px 20px; margin-top: 60px; }
 
         /* Responsive */
         @media (max-width: 768px) {
