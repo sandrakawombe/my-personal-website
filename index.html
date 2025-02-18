@@ -13,10 +13,36 @@
         body { font-family: 'Roboto', sans-serif; background-color: #F5F5F5; color: #3E2723; line-height: 1.6; }
         h1, h2 { font-family: 'Playfair Display', serif; font-weight: 700; }
 
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Header */
         .header { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 80px 0; }
         .header h1 { font-size: 48px; margin-bottom: 20px; }
         .header p { font-size: 24px; font-weight: 300; }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #3E2723;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #D7CCC8;
+        }
 
         /* Container */
         .container { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin: 0 auto; padding: 40px 20px; max-width: 1200px; }
@@ -32,15 +58,52 @@
         .main-content { background-color: #FFF8E1; padding: 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
         .main-content h2 { font-size: 32px; color: #3E2723; margin-bottom: 20px; }
         .main-content p { font-size: 18px; color: #6D4C41; margin-bottom: 20px; }
-        
+
         /* Skills Section */
         .skills { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
         .skills span { background-color: #6D4C41; color: white; padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 16px; }
         
+        /* Progress Bars for Tech Stack */
+        .progress-bar-container {
+            margin-top: 30px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #E1C6B8;
+            border-radius: 20px;
+            height: 20px;
+            margin-bottom: 15px;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            border-radius: 20px;
+        }
+        .java { width: 90%; background-color: #3E2723; }
+        .spring { width: 80%; background-color: #7C4D40; }
+        .aws { width: 75%; background-color: #FF9800; }
+
         /* Certifications */
         .certifications { margin-top: 40px; }
         .certifications ul { list-style-type: none; }
         .certifications ul li { background-color: #3E2723; color: white; padding: 12px; margin: 8px 0; border-radius: 10px; font-size: 16px; }
+
+        /* Testimonials */
+        .testimonials { margin-top: 60px; }
+        .testimonial {
+            background-color: #FFF8E1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #6D4C41;
+        }
+        .testimonial h3 {
+            margin-top: 10px;
+            color: #3E2723;
+        }
 
         /* Footer */
         .footer { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 30px 20px; margin-top: 60px; }
@@ -53,7 +116,16 @@
     </style>
 </head>
 <body>
-    <div class="header">
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#testimonials">Testimonials</a>
+    </nav>
+
+    <div class="header" id="about">
         <h1>Sandra Kawombe Nakayima</h1>
         <p>Java Developer | Backend Expert | Passionate about Scalable Systems</p>
     </div>
@@ -65,10 +137,9 @@
             <p>Java Developer | Backend Specialist | Tech Enthusiast</p>
             <p>Email: <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a></p>
             <p>Phone: <a href="tel:+16412339266">+1 (641) 233-9266</a></p>
-            <p><a href="https://www.linkedin.com/in/sandrakawombe" target="_blank">LinkedIn</a></p>
         </div>
 
-        <div class="main-content">
+        <div class="main-content" id="skills">
             <h2>About Me</h2>
             <p>I am a passionate Java Developer with over 5 years of experience, specializing in backend technologies. I am committed to building scalable, reliable, and secure systems that provide value to users. My expertise lies in Java, Spring Boot, AWS Cloud, and Microservices.</p>
 
@@ -83,6 +154,13 @@
                 <span>Cloud (AWS, Azure)</span>
             </div>
 
+            <h2>Tech Stack</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar"><span class="java"></span></div>
+                <div class="progress-bar"><span class="spring"></span></div>
+                <div class="progress-bar"><span class="aws"></span></div>
+            </div>
+
             <h2>Experience</h2>
             <p><strong>National Medical Stores (2023-2024)</strong> - Applications & Database Developer</p>
             <ul>
@@ -95,11 +173,7 @@
                 <li>Worked in Agile teams to deliver high-quality, secure, and scalable software solutions.</li>
             </ul>
 
-            <h2>Education</h2>
-            <p><strong>Maharishi International University</strong> (2023 - 2027) - Master's in Computer Science</p>
-            <p><strong>Makerere University</strong> (2014 - 2018) - Bachelor's in Computer Science</p>
-
-            <h2>Certifications</h2>
+            <h2 id="certifications">Certifications</h2>
             <div class="certifications">
                 <ul>
                     <li><strong>Oracle Certified Associate (OCA) - Java SE 8 Programmer</strong></li>
@@ -107,6 +181,15 @@
                     <li><strong>AWS Certified Cloud Practitioner</strong></li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="testimonials" id="testimonials">
+        <div class="testimonial">
+            <p>"Sandra is a highly skilled backend developer. Her Java expertise and ability to solve complex problems have been a huge asset to our team." - <strong>John Doe</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Sandra’s knowledge in AWS and microservices is exceptional. She’s a valuable addition to any team." - <strong>Jane Smith</strong></p>
         </div>
     </div>
 
