@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandra Kawombe Nakayima - Developer CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Global Reset */
         * {
@@ -14,120 +14,155 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f7f7;
-            color: #3e3e3e;
-            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.8;
         }
 
         /* Header */
         .header {
-            background: #2c3e50;
+            background-color: #2d3436;
             color: white;
+            padding: 40px 0;
             text-align: center;
-            padding: 20px 0;
-            font-size: 32px;
+            font-size: 36px;
             font-family: 'Playfair Display', serif;
             letter-spacing: 1px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-bottom: 6px solid #16a085;
         }
 
-        /* Main Container */
+        /* Main Layout */
         .container {
-            max-width: 960px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
+            gap: 30px;
+            grid-template-areas: 
+                "sidebar main-content";
         }
 
-        /* Profile Image */
-        .profile-img {
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2d3436;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar img {
             width: 180px;
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid #2c3e50;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: -120px;
+            margin-bottom: 20px;
+            border: 6px solid #16a085;
         }
 
-        /* Contact & Introduction */
-        .contact-info {
-            text-align: center;
-            margin-top: -80px;
+        .sidebar h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #fff;
         }
 
-        .contact-info h1 {
-            font-size: 36px;
-            color: #2c3e50;
-        }
-
-        .contact-info p {
+        .sidebar p {
             font-size: 18px;
-            color: #7f8c8d;
+            color: #aaa;
+            margin-bottom: 20px;
         }
 
-        /* Section Titles */
+        .sidebar a {
+            color: #16a085;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            grid-area: main-content;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            color: #2c3e50;
-            margin-top: 30px;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 5px;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2d3436;
+            position: relative;
         }
 
-        /* Content */
-        .content {
-            margin-top: 20px;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: #16a085;
+            left: 0;
+            bottom: 0;
         }
 
         .content p {
             font-size: 18px;
+            color: #555;
             line-height: 1.8;
-        }
-
-        .content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .content ul li {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #2c3e50;
+            margin-bottom: 20px;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
         .skills span {
-            background: #2c3e50;
+            background-color: #16a085;
             color: white;
-            padding: 14px 22px;
-            border-radius: 30px;
-            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
             font-size: 16px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .skills span:hover {
-            background: #16a085;
+            background-color: #2d3436;
+            cursor: pointer;
         }
 
+        .experience, .education, .projects {
+            margin-bottom: 40px;
+        }
+
+        .experience ul, .projects ul, .education ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .experience ul li, .projects ul li, .education ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .experience ul li strong, .projects ul li strong, .education ul li strong {
+            color: #16a085;
+        }
+
+        /* Footer */
         .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: #2c3e50;
+            background-color: #2d3436;
             color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+            border-top: 4px solid #16a085;
         }
     </style>
 </head>
@@ -135,22 +170,22 @@
     <div class="header">Sandra Kawombe Nakayima - Java Developer</div>
 
     <div class="container">
-        <!-- Contact Info Section -->
-        <div class="contact-info">
-            <img src="https://my-personal-website-sandra.s3.us-east-1.amazonaws.com/Screenshot+2025-02-18+at+2.13.11%E2%80%AFAM.png" alt="Sandra Kawombe Nakayima" class="profile-img">
-            <h1>Sandra Kawombe Nakayima</h1>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="https://my-personal-website-sandra.s3.us-east-1.amazonaws.com/Screenshot+2025-02-18+at+2.13.11%E2%80%AFAM.png" alt="Sandra Kawombe Nakayima">
+            <h2>Sandra Kawombe Nakayima</h2>
             <p>Experienced Java Developer | Backend Specialist | Tech Enthusiast</p>
-            <p>Email: <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a> | Phone: <a href="tel:+16412339266">+1 (641) 233-9266</a></p>
+            <p>Email: <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a></p>
+            <p>Phone: <a href="tel:+16412339266">+1 (641) 233-9266</a></p>
         </div>
 
-        <!-- About Me Section -->
-        <div class="content">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- About Me Section -->
             <div class="section-title">About Me</div>
-            <p>I am a highly skilled Java Developer with over 5 years of experience, specializing in backend development for enterprise-grade applications. Passionate about building scalable and high-performance systems, I am proficient in technologies such as Java, Spring Boot, SQL, and RESTful APIs.</p>
-        </div>
+            <p>I am a Java Developer with 5+ years of experience specializing in backend development for enterprise applications. Passionate about building scalable, high-performance systems using Java, Spring Boot, and REST APIs.</p>
 
-        <!-- Skills Section -->
-        <div class="content">
+            <!-- Skills Section -->
             <div class="section-title">Skills & Technologies</div>
             <div class="skills">
                 <span>Java</span>
@@ -161,51 +196,51 @@
                 <span>React</span>
                 <span>Cloud Computing</span>
             </div>
-        </div>
 
-        <!-- Experience Section -->
-        <div class="content">
+            <!-- Experience Section -->
             <div class="section-title">Experience</div>
-            <ul>
-                <li><strong>National Medical Stores (2023-2024)</strong> - Applications & Database Developer
-                    <ul>
-                        <li>Developed and maintained backend applications using Java and Spring Boot.</li>
-                        <li>Optimized database queries and integrated APIs for efficient data processing.</li>
-                    </ul>
-                </li>
-                <li><strong>Pride Microfinance Bank Uganda Limited (2018-2023)</strong> - Application Developer
-                    <ul>
-                        <li>Built scalable web applications using Java and integrated payment systems.</li>
-                        <li>Collaborated in Agile teams to deliver high-quality software solutions.</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+            <div class="experience">
+                <ul>
+                    <li><strong>National Medical Stores (2023-2024)</strong> - Applications & Database Developer
+                        <ul>
+                            <li>Developed and maintained backend applications using Java and Spring Boot.</li>
+                            <li>Optimized database queries and integrated APIs for efficient data processing.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pride Microfinance Bank Uganda Limited (2018-2023)</strong> - Application Developer
+                        <ul>
+                            <li>Built scalable web applications using Java and integrated payment systems.</li>
+                            <li>Collaborated in Agile teams to deliver high-quality software solutions.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-        <!-- Education Section -->
-        <div class="content">
+            <!-- Education Section -->
             <div class="section-title">Education</div>
-            <ul>
-                <li><strong>Maharishi International University</strong> (2023 - 2027) - Master's in Computer Science</li>
-                <li><strong>University of XYZ</strong> (2014 - 2018) - Bachelor's in Computer Science</li>
-            </ul>
-        </div>
+            <div class="education">
+                <ul>
+                    <li><strong>Maharishi International University</strong> (2023 - 2027) - Master's in Computer Science</li>
+                    <li><strong>University of XYZ</strong> (2014 - 2018) - Bachelor's in Computer Science</li>
+                </ul>
+            </div>
 
-        <!-- Projects Section -->
-        <div class="content">
+            <!-- Projects Section -->
             <div class="section-title">Projects</div>
-            <ul>
-                <li><strong>Image Uploader App</strong> - A serverless image uploader built with ReactJS and AWS.
-                    <ul>
-                        <li>Integrated AWS services such as Lambda, S3, and DynamoDB for image storage and processing.</li>
-                    </ul>
-                </li>
-                <li><strong>Inventory Management System</strong> - Web-based application for tracking inventory levels.
-                    <ul>
-                        <li>Developed using Java, Spring Boot, and MySQL for backend operations.</li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="projects">
+                <ul>
+                    <li><strong>Image Uploader App</strong> - A serverless image uploader built with ReactJS and AWS.
+                        <ul>
+                            <li>Integrated AWS services such as Lambda, S3, and DynamoDB for image storage and processing.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Inventory Management System</strong> - Web-based application for tracking inventory levels.
+                        <ul>
+                            <li>Developed using Java, Spring Boot, and MySQL for backend operations.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
