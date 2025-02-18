@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandra Kawombe Nakayima - Java Developer. Specializing in Backend Development, Java, Spring Boot, and Microservices.">
+    <meta name="keywords" content="Java Developer, Backend, Spring Boot, REST APIs, Microservices, AWS, ITIL, Cloud Computing">
     <title>Sandra Kawombe Nakayima - Java Developer</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Reset */
+        /* Reset and Base Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background-color: #F5F5F5; color: #3E2723; }
+        body { font-family: 'Roboto', sans-serif; background-color: #F5F5F5; color: #3E2723; line-height: 1.6; }
+        h1, h2 { font-family: 'Playfair Display', serif; font-weight: 700; }
 
         /* Header */
-        .header { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 50px 0; }
-        .header h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px; }
+        .header { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 80px 0; }
+        .header h1 { font-size: 48px; margin-bottom: 20px; }
         .header p { font-size: 24px; font-weight: 300; }
 
         /* Container */
-        .container { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin: 40px auto; max-width: 1200px; }
+        .container { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin: 0 auto; padding: 40px 20px; max-width: 1200px; }
         
         /* Sidebar */
-        .sidebar { background-color: #D7CCC8; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .sidebar { background-color: #D7CCC8; padding: 30px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
         .sidebar img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
         .sidebar h2 { font-size: 28px; color: #3E2723; margin-bottom: 10px; }
         .sidebar p { font-size: 18px; color: #6D4C41; margin-bottom: 10px; }
+        .sidebar a { color: #6D4C41; text-decoration: none; font-weight: 600; }
 
         /* Main Content */
-        .main-content { background-color: #FFF8E1; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
-        .main-content h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: #3E2723; margin-bottom: 20px; }
-        .main-content ul { list-style-type: none; padding: 0; }
-        .main-content ul li { margin: 10px 0; }
-
+        .main-content { background-color: #FFF8E1; padding: 40px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); }
+        .main-content h2 { font-size: 32px; color: #3E2723; margin-bottom: 20px; }
+        .main-content p { font-size: 18px; color: #6D4C41; margin-bottom: 20px; }
+        
         /* Skills Section */
-        .skills { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
-        .skills span { background-color: #6D4C41; color: white; padding: 10px 20px; border-radius: 25px; font-weight: 600; }
+        .skills { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .skills span { background-color: #6D4C41; color: white; padding: 12px 24px; border-radius: 30px; font-weight: 600; font-size: 16px; }
+        
+        /* Certifications */
+        .certifications { margin-top: 40px; }
+        .certifications ul { list-style-type: none; }
+        .certifications ul li { background-color: #3E2723; color: white; padding: 12px; margin: 8px 0; border-radius: 10px; font-size: 16px; }
 
         /* Footer */
-        .footer { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 20px; margin-top: 40px; }
+        .footer { background-color: #D7CCC8; color: #3E2723; text-align: center; padding: 30px 20px; margin-top: 60px; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -56,7 +70,7 @@
 
         <div class="main-content">
             <h2>About Me</h2>
-            <p>I am a dedicated Java Developer with over 5 years of experience specializing in backend technologies. I build scalable, secure, and high-performance systems using Java, Spring Boot, and other modern backend tools.</p>
+            <p>I am a passionate Java Developer with over 5 years of experience, specializing in backend technologies. I am committed to building scalable, reliable, and secure systems that provide value to users. My expertise lies in Java, Spring Boot, AWS Cloud, and Microservices.</p>
 
             <h2>Technical Skills</h2>
             <div class="skills">
@@ -72,13 +86,13 @@
             <h2>Experience</h2>
             <p><strong>National Medical Stores (2023-2024)</strong> - Applications & Database Developer</p>
             <ul>
-                <li>Developed backend systems to support medical inventory management.</li>
-                <li>Enhanced database performance with SQL optimizations and integrated external APIs.</li>
+                <li>Developed backend systems for medical inventory management using Java and Spring Boot.</li>
+                <li>Optimized SQL queries and integrated third-party APIs to enhance system performance.</li>
             </ul>
             <p><strong>Pride Microfinance Bank Uganda Limited (2018-2023)</strong> - Application Developer</p>
             <ul>
-                <li>Worked on financial transaction systems using Java and integrated payment gateways.</li>
-                <li>Collaborated in agile teams to build secure and scalable applications.</li>
+                <li>Built web-based financial applications using Java and integrated payment solutions.</li>
+                <li>Worked in Agile teams to deliver high-quality, secure, and scalable software solutions.</li>
             </ul>
 
             <h2>Education</h2>
@@ -86,15 +100,13 @@
             <p><strong>Makerere University</strong> (2014 - 2018) - Bachelor's in Computer Science</p>
 
             <h2>Certifications</h2>
-            <ul>
-                <li><strong>Oracle Certified Associate (OCA) - Java SE 8 Programmer</strong></li>
-                <li><strong>ITIL® 4 Foundation</strong></li>
-                <li><strong>AWS Certified Cloud Practitioner</strong></li>
-            </ul>
-
-            <h2>Key Projects</h2>
-            <p><strong>Inventory Management System</strong> - A Spring Boot-based application to manage inventory for large organizations.</p>
-            <p><strong>Payment Gateway Integration</strong> - Integrated PayPal and Stripe with backend services to process payments in a secure manner.</p>
+            <div class="certifications">
+                <ul>
+                    <li><strong>Oracle Certified Associate (OCA) - Java SE 8 Programmer</strong></li>
+                    <li><strong>ITIL® 4 Foundation</strong></li>
+                    <li><strong>AWS Certified Cloud Practitioner</strong></li>
+                </ul>
+            </div>
         </div>
     </div>
 
