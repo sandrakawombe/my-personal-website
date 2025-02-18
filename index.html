@@ -5,54 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandra Kawombe Nakayima | Java Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Sandra Kawombe Nakayima</h1>
-        <p>Java Developer | Backend Specialist | Fintech & Health Tech Enthusiast</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Sandra Kawombe Nakayima</h1>
+            <p>Java Developer | Backend Engineer | Oracle DB Specialist</p>
+        </div>
     </header>
     
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Dedicated and self-motivated software engineer with 5+ years’ experience in backend development using Java, SQL, and Spring Boot. Passionate about fintech and health tech innovations.</p>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a dedicated and self-motivated software engineer with over 5 years of experience in backend development, specializing in Java, SQL, and Spring Boot.</p>
+        </div>
     </section>
     
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <h3>National Medical Stores, Kampala, Uganda (2023-2024)</h3>
-        <p>Applications and Database Developer - Developed enterprise applications and banking integrations.</p>
-        <h3>Pride Microfinance Bank Uganda Limited (2018-2023)</h3>
-        <p>Application Developer - Built banking integrations, reconciliation apps, and automated database management tasks.</p>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="job">
+                <h3>Applications and Database Developer</h3>
+                <p>National Medical Stores, Uganda (2023-2024)</p>
+                <ul>
+                    <li>Developed web services for NIRA ID verification integration.</li>
+                    <li>Implemented HR system modules for salary computation and leave management.</li>
+                    <li>Optimized database scripts for improved system performance.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Application Developer</h3>
+                <p>Pride Microfinance Bank Uganda Limited (2018-2023)</p>
+                <ul>
+                    <li>Integrated third-party payment systems with the core banking system.</li>
+                    <li>Developed a reconciliation system to automate bank transaction matching.</li>
+                    <li>Upgraded the banking database from Oracle 12c to 19c.</li>
+                </ul>
+            </div>
+        </div>
     </section>
     
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>Master of Science in Computer Science</strong> (In progress, expected April 2027) - Maharishi International University</p>
-        <p><strong>Bachelor of Science in Computer Science</strong> (2018) - Makerere University</p>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Java, Spring Boot</li>
+                <li>REST APIs & Microservices</li>
+                <li>SQL, Oracle DB, MySQL</li>
+                <li>React, HTML, CSS, JavaScript</li>
+                <li>Agile, TDD, Scrum</li>
+            </ul>
+        </div>
     </section>
     
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Coming soon...</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a></p>
-        <p>Phone: 641-233-9266</p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:sandrakawombe@gmail.com">sandrakawombe@gmail.com</a></p>
+            <p>Phone: 641-233-9266</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sandrakawombe">linkedin.com/in/sandrakawombe</a></p>
+        </div>
     </section>
     
     <footer>
-        <p>&copy; 2025 - Sandra Kawombe Nakayima. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Sandra Kawombe Nakayima. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
